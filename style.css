@@ -1,0 +1,125 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.x-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.y-center {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.button {
+    font-size: large;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    border-color: #1f4a6f;
+    border-width: 2px;
+    background-color: white;
+    border-style: solid;
+    overflow: hidden;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4B82B1; /* Green */
+    color: white;
+}
+
+input.button {
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.rotate {
+    transform: rotate(0);
+    transition-duration: 0.4s;
+}
+
+.flip {
+    transform: rotate(360deg);
+}
+
+a.no-underline:link,a.no-underline:active,a.no-underline:visited,a.no-underline:hover { 
+    text-decoration: none; 
+}
+
+.hidden {
+    opacity: 0;
+    transition-duration: 0.4s;
+}
+
+.hidden:hover {
+    opacity: 1;
+}
+
+.bottom {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+.navbar {
+    margin: 0px;
+    position: fixed;
+    padding:10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.pull-right {
+    text-align: end;
+}
+
+.card {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding:15px;
+}
+
+.inset {
+    padding: 2px;
+    width: [object Object]px; 
+	height: [object Object]px; 
+	background: #F8F8F8; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.5) inset; 
+	-webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5) inset; 
+	-moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5) inset; 
+}
+
+.top-left-badge {
+    animation: top-left-badge-animation 0.4s both ease-in;
+}
+
+@keyframes top-left-badge-animation {
+
+    0% {
+        display: block;
+        position: fixed;
+        bottom: 0;
+    }
+  
+    100% {
+        width: 35%;
+    }
+  }
+  
+.back {
+    z-index: -1;
+}

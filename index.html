@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to hacker-point.com</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body style="color: white;background-color: rgb(26, 26, 26);">
+        <h1 class="x-center">This is the main page for hacker-point.com</h1>
+        <h2 class="x-center">There is nothing to do here</h2>
+        <h3 class="x-center">Please Go Away</h3>
+        <div class='x-center' style="margin-top: 0;display: flex;align-items: center;" id="buttonHit"></div>
+        <a id="button" class="no-underline x-center" href="/projects"><button style="width:auto;" class="button rotate">Go Away</button></a>
+        <div style="width: 100%;margin: 0px;left: 0;" class="x-center bottom">
+            <h6 class="x-center hidden">(Also I am not a criminal)</h6>
+        </div>
+        <img class="x-center bottom back" src="/HPLogo.svg">
+        <script>
+            window.addEventListener('load', function () {
+                var element = document.getElementById('button')
+                var hitbox = document.getElementById('buttonHit')
+                var height = element.getElementsByTagName('button')[0].getBoundingClientRect().height
+                var width = element.getElementsByTagName('button')[0].getBoundingClientRect().width
+                element.getElementsByTagName('button')[0].style.width=width.toString()+'px'
+                hitbox.style.width=width.toString()+'px'
+                hitbox.style.height=height.toString()+'px'
+                element.style.marginTop=(((width-height)/2)*-1).toString()+'px'
+                document.addEventListener('mousemove', function(event) {
+                    // Get the bounding box of element S
+                    const rect = hitbox.getBoundingClientRect();
+
+                    // Check if the mouse position is inside the bounding box of element S
+                    if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) {
+                        document.getElementById('button').getElementsByTagName('button')[0].classList.add('flip')
+                        setTimeout(function(){
+                            document.getElementById('button').getElementsByTagName('button')[0].innerHTML="I Lied"
+                        },150)
+                    } else {
+                        document.getElementById('button').getElementsByTagName('button')[0].classList.remove('flip')
+                        setTimeout(function(){
+                        document.getElementById('button').getElementsByTagName('button')[0].innerHTML="Go Away"
+                        },150)
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>

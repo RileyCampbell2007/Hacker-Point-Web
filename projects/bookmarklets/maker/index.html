@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bookmarklet Maker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body style="color: white;background-color: rgb(26, 26, 26);">
+        <img class="x-center bottom back" src="/HPLogo.svg">
+        <div class="card x-center" style="background-color: rgb(76, 76, 76); width: 95%;">
+            <h2 class="x-center">Bookmarklet Maker</h2>
+            <label class="x-center" style="white-space: break-spaces;">Select a js file and hit upload!
+            </label>
+            <div class="x-center">
+                <input class="x-center" id="name" type="text" placeholder="Bookmarklet Name" value="Bookmarklet"><br>
+                <div class="x-center" style="width:70%">
+                    <input class="x-center" type="file" accept=".js" id="fileInput"><br>
+                </div>
+                <button class="button x-center" onclick="handleUpload()">Upload</button>
+            </div>
+            <div class="x-center" id="results"></div>
+        </div>
+        <h6 class="x-center hidden">(Also I am not a criminal)</h6>
+        <script>
+            function urlEncodeString(str) {
+                return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+                    return '%' + c.charCodeAt(0).toString(16);
+                });
+            }
+            function handleUpload() {
+                const fileInput = document.getElementById('fileInput');
+                const file = fileInput.files[0];
+                fileInput.value=''
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(event) {
+                        const fileData = event.target.result;
+                        document.getElementById('results').innerHTML='<br><a href="javascript:(function(){'+urlEncodeString(fileData)+'})();" onclick="return false;"><button class="button">'+document.getElementById('name').value+'</button></a>'
+                        document.getElementById('name').value=''
+                    };
+
+                    reader.readAsText(file);
+                }
+            }
+        </script>
+    </body>
+</html>
