@@ -36,6 +36,8 @@ body {
     color: white;
 }
 
+.button:disabled:hover {}
+
 input.button {
   opacity: 0;
   cursor: pointer;
