@@ -43,12 +43,13 @@
 
             function addButton(initButton) {
                 initButton.removeAttribute('onclick')
+                initButton.removeAttribute('id')
                 initButton.disabled=true
                 newButton = document.createElement('button')
+                newButton.setAttribute('id','movingButton')
                 newButton.setAttribute('class',"button x-center")
                 newButton.setAttribute('onclick','addButton(this)')
                 newButton.innerHTML='No Press Me!'
-                document.getElementById('duplicatingButtonContainer').appendChild(document.createElement('br'))
                 document.getElementById('duplicatingButtonContainer').appendChild(newButton)
                 document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
             }
