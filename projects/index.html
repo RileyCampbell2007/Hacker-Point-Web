@@ -33,12 +33,14 @@
         <a class="no-underline x-center" href="/projects/bookmarklets/"><button class="button">Bookmarklets</button></a><br>
         <button id='movingButton' onmouseenter="" style="font-size: large;font-family: 'Inter', sans-serif;font-weight: 300;border-color: #1f4a6f;border-width: 2px;background-color: white;border-style: solid;overflow: hidden;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;transition-duration: 0.4s;" class="x-center">Press Me!</button><br>
         <div class="x-center" id="duplicatingButtonContainer">
-            <button class="button x-center" onclick="addButton(this)">No Press Me!</button>
+            <button class="button x-center" onclick="addButton(this);parable.play()">No Press Me!</button>
         </div>
         <br>
         <br>
         <br>
         <script>
+            globalThis.parable=Audio('/parable.mp3')
+
             function addButton(initButton) {
                 initButton.removeAttribute('onclick')
                 initButton.disabled=true
