@@ -51,6 +51,7 @@
                 newButton.setAttribute('onclick','addButton(this)')
                 newButton.innerHTML='No Press Me!'
                 document.getElementById('duplicatingButtonContainer').appendChild(newButton)
+                document.getElementById('movingButton').addEventListener('mousemove', eventthing);
             }
 
             function eventthing(event) {
