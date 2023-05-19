@@ -61,8 +61,11 @@
                 if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) {
                     let button=document.getElementById('movingButton')
                     button.style.position='absolute';
-                    button.style.setProperty('top', rect.top.toString()+'px')
-                    button.style.setProperty('left', rect.left.toString()+'px')
+                    if (button.style.top==''){
+                        button.style.setProperty('top', rect.top.toString()+'px')
+                        button.style.setProperty('left', rect.left.toString()+'px')
+                        setTimeout(() => {},400)
+                    }
                     let randomNumber1 = Math.floor(Math.random() * 90);
                     let randomNumber2 = Math.floor(Math.random() * 50);
                     button.style.setProperty('top', randomNumber2.toString()+'%');
