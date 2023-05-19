@@ -31,12 +31,14 @@ body {
     transition-duration: 0.4s;
 }
 
-.button:hover {
+.button:not(:disabled):hover {
     background-color: #4B82B1; /* Green */
     color: white;
 }
 
-.button:disabled:hover {}
+.button:disabled {
+    pointer-events: none;
+}
 
 input.button {
   opacity: 0;
