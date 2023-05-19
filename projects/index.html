@@ -50,7 +50,7 @@
                 newButton.innerHTML='No Press Me!'
                 document.getElementById('duplicatingButtonContainer').appendChild(document.createElement('br'))
                 document.getElementById('duplicatingButtonContainer').appendChild(newButton)
-                window.scrollTo({behavior: 'smooth',block: 'end'});
+                document.documentElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
             }
 
             function eventthing(event) {
