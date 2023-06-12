@@ -84,20 +84,13 @@ body {
     font-weight: 400;
     padding: 10px;
     border-color: #7a7a7a;
-    color: #636363;
     border-width: 2px;
-    background-color: rgb(244, 244, 244);
     border-style: solid;
     overflow: hidden;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     transition-duration: 0.4s;
-}
-
-.button:not(:disabled):hover {
-    background-color: #7a7a7a;
-    color: white;
 }
 
 .button:disabled {
