@@ -85,6 +85,7 @@ body {
     padding: 10px;
     color: #FFFFFF;
     background-color: #079bf7;
+    border-style: none;
     overflow: hidden;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
