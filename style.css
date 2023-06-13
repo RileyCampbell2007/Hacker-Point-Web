@@ -87,9 +87,9 @@ body {
     background-color: #079bf7;
     border-style: none;
     overflow: hidden;
-    -webkit-border-radius: 8000000px;
-    -moz-border-radius: 800000px;
-    border-radius: 800000px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
     transition-duration: 0.4s;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
