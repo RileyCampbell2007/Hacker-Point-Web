@@ -83,11 +83,8 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     padding: 10px;
-    border-color: #079bf7;
     color: #FFFFFF;
-    border-width: 2px;
     background-color: #079bf7;
-    border-style: solid;
     overflow: hidden;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
