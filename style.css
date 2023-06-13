@@ -97,7 +97,7 @@ body {
 }
 
 .button:not(:disabled):hover {
-    background-color: #43b4fa;
+    background-color: #27a6f5;
     transform: scale(1.1);
     cursor: pointer;
 }
