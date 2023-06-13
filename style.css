@@ -216,3 +216,7 @@ body.dark a:link {
 body.dark a:visited {
     color:#f32121;
 }
+
+body.dark .button:not(:disabled):hover {
+    background-color: #0268a8;
+}
