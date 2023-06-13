@@ -23,7 +23,12 @@ document.getElementsByClassName('hamburgerButton')[0].addEventListener('click', 
 })
 
 if(localStorage.getItem('darkMode') == null) {
-    localStorage.setItem('darkMode','false')
+    if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        localStorage.setItem('darkMode','true')
+    } else {
+        localStorage.setItem('darkMode','false')
+    }
+    
 }
 
 if(localStorage.getItem('darkMode') == 'true'){
