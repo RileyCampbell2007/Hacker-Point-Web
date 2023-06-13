@@ -218,5 +218,5 @@ body.dark a:visited {
 }
 
 body.dark .button:not(:disabled):hover {
-    background-color: #0268a8;
+    background-color: #0489db;
 }
