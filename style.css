@@ -96,7 +96,7 @@ body {
 }
 
 .button:not(:disabled):hover {
-    background-color: #a2d5f5;
+    background-color: #59bbf7;
     cursor: pointer;
 }
 
