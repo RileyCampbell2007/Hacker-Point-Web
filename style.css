@@ -93,6 +93,9 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
     transition-duration: 0.4s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .button:not(:disabled):hover {
