@@ -47,87 +47,36 @@ body {
     display: none;
 }
 
-/* Hamburger */
-#menuToggle {
-     display: block;
-     position: relative;
-     top: 50px;
-     left: 50px;
-     z-index: 1;
-     -webkit-user-select: none;
-     user-select: none;
+.navBarContainer .hamburger {
+    width:100%;
+    background-color: #0f68b2;
+    display: none;
 }
- #menuToggle a {
-     text-decoration: none;
-     color: #232323;
-     transition: color 0.3s ease;
+
+.navBarContainer .hamburger .hamburgerList{
+    width:100%;
+    list-style-type: none;
+    padding-left: 0;
 }
- #menuToggle a:hover {
-     color: tomato;
+
+.navBarContainer .hamburger .hamburgerList .hamburgerItem {
+    display:block;
+    text-decoration: none;
+    width:99.8%;
+    margin-top:3px;
+    margin-left: 1p;
+    color: rgb(244, 244, 244);
+    background-color: #2196f3;
 }
- #menuToggle input {
-     display: block;
-     width: 40px;
-     height: 32px;
-     position: absolute;
-     top: -7px;
-     left: -5px;
-     cursor: pointer;
-     opacity: 0;
-     z-index: 2;
-     -webkit-touch-callout: none;
+
+.navBarContainer .hamburger .hamburgerList .hamburgerItem a {
+    margin: 2px;
 }
- #menuToggle span {
-     display: block;
-     width: 33px;
-     height: 4px;
-     margin-bottom: 5px;
-     position: relative;
-     background: #cdcdcd;
-     border-radius: 3px;
-     z-index: 1;
-     transform-origin: 4px 0px;
-     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+
+
+.navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
+    background-color: #1a7dcd;
 }
- #menuToggle span:first-child {
-     transform-origin: 0% 0%;
-}
- #menuToggle span:nth-last-child(2) {
-     transform-origin: 0% 100%;
-}
- #menuToggle input:checked ~ span {
-     opacity: 1;
-     transform: rotate(45deg) translate(-2px, -1px);
-     background: #232323;
-}
- #menuToggle input:checked ~ span:nth-last-child(3) {
-     opacity: 0;
-     transform: rotate(0deg) scale(0.2, 0.2);
-}
- #menuToggle input:checked ~ span:nth-last-child(2) {
-     transform: rotate(-45deg) translate(0, -1px);
-}
- #menu {
-     position: absolute;
-     width: 100%;
-     margin: -100px 0 0 -50px;
-     padding: 50px;
-     padding-top: 125px;
-     background: #ededed;
-     list-style-type: none;
-     -webkit-font-smoothing: antialiased;
-     transform-origin: 0 0;
-     transform: translate(0, -150%);
-     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
- #menu li {
-     padding: 10px 0;
-     font-size: 22px;
-}
- #menuToggle input:checked ~ ul {
-     transform: none;
-}
-/* End Hamburger */
 
 .button {
     font-size: large;
