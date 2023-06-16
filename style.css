@@ -238,3 +238,25 @@ body.dark a:visited {
 body.dark .button:not(:disabled):hover {
     background-color: #0489db;
 }
+
+
+body.dark .navBarContainer .hamburger {
+    position: absolute;
+    left:0;
+    top:-100%;
+    width:120%;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+}
+
+body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem {
+    display:block;
+    text-decoration: none;
+    width:99.8%;
+    margin-top:3px;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
+    background-color: #CCCCCC;
