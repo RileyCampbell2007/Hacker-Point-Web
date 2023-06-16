@@ -1,4 +1,4 @@
-window.addEventListener('resize', () => {
+`window.addEventListener('resize', () => {
     var pageWidth = window.innerWidth;
         var contentBoxes = document.getElementsByClassName('contentBox')
         for (let i=0;i<contentBoxes.length;i++) {
@@ -12,7 +12,7 @@ window.addEventListener('resize', () => {
                 }
         }
 });
-window.dispatchEvent(new Event('resize'))
+window.dispatchEvent(new Event('resize'))`
 
 document.getElementsByClassName('hamburgerButton')[0].addEventListener('click', ()=>{
     if(window.getComputedStyle(document.getElementsByClassName('hamburger')[0]).getPropertyValue('display')=='none') {
