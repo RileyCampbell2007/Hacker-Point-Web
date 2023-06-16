@@ -134,6 +134,9 @@ body {
 }
 
 @media (max-width: 700px) {
+    .contentBox {
+        grid-template-columns: 1fr;
+    }
     .contentBox .content .button {
         width:100%;
     }
