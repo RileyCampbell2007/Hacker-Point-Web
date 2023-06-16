@@ -236,6 +236,7 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem {
 
 body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
     background-color: #CCCCCC;
+}
 
 @media (max-width: 700px) {
     .contentBox {
