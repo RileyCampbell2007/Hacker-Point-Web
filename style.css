@@ -48,7 +48,9 @@ body {
 }
 
 .navBarContainer .hamburger {
-    width:100%;
+    position: absolute;
+    left:0
+    width:120%;
     background-color: #0f68b2;
     display: none;
 }
