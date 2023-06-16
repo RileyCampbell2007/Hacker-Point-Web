@@ -79,7 +79,7 @@ body {
 
 
 .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
-    background-color: #CCCCCC;
+    background-color: rgb(60, 60, 60);
 }
 
 .button {
