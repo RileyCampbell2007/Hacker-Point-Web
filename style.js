@@ -1,8 +1,8 @@
 document.getElementsByClassName('hamburgerButton')[0].addEventListener('click', ()=>{
-    if(window.getComputedStyle(document.getElementsByClassName('hamburger')[0]).getPropertyValue('display')=='none') {
-        document.getElementsByClassName('hamburger')[0].style.setProperty('display','block')
+    if(document.getElementsByClassName('hamburger')[0].classList.contains('active')) {
+        document.getElementsByClassName('hamburger')[0].classList.remove('active')
     } else {
-        document.getElementsByClassName('hamburger')[0].style.setProperty('display','none')
+        document.getElementsByClassName('hamburger')[0].classList.add('active')
     }
 })
 
