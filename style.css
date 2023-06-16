@@ -156,12 +156,6 @@ body {
     }
 }
 
-@media (min-width: 701px) {
-    .navBar .linkSection .linkContainer .linkItem {
-        display:none;
-    }
-}
-
 .switch {
     position: relative;
     display: inline-block;
