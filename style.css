@@ -54,7 +54,7 @@ body {
     left:0;
     top:-100%;
     width:120%;
-    background-color: #FFFFFF;
+    background-color: rgb(43, 43, 43);
     transition: 0.4s;
 }
 
@@ -69,8 +69,8 @@ body {
     text-decoration: none;
     width:99.8%;
     margin-top:3px;
-    color: #000000;
-    background-color: #FFFFFF;
+    color: #FEFEFE;
+    background-color: rgb(43, 43, 43);
 }
 
 .navBarContainer .hamburger .hamburgerList .hamburgerItem a {
