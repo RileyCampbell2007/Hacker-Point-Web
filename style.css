@@ -44,6 +44,7 @@ body {
 }
 
 .navBar .linkSection .linkContainer .hamburgerButton {
+    position: relative;
     display: none;
     z-index: 9999999;
 }
