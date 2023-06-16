@@ -52,7 +52,7 @@ body {
 .navBarContainer .hamburger {
     position: absolute;
     left:0;
-    top:-100%;
+    top:-50%;
     width:120%;
     background-color: #FFFFFF;
     transition: 0.4s;
