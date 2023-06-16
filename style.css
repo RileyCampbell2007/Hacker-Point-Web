@@ -50,9 +50,14 @@ body {
 .navBarContainer .hamburger {
     position: absolute;
     left:0;
+    top:-100%;
     width:120%;
     background-color: #0f68b2;
-    display: none;
+    transition: 0.4s;
+}
+
+.navBarContainer .hamburger.active {
+    top: 0;
 }
 
 .navBarContainer .hamburger .hamburgerList{
@@ -147,6 +152,12 @@ body {
     }
     .navBar .linkSection .linkContainer .hamburgerButton {
         display: block;
+    }
+}
+
+@media (min-width: 701px) {
+    .navBar .linkSection .linkContainer .linkItem {
+        display:none;
     }
 }
 
