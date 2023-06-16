@@ -54,7 +54,7 @@ body {
     left:0;
     top:-100%;
     width:120%;
-    background-color: #0f68b2;
+    background-color: #FFFFFF;
     transition: 0.4s;
 }
 
@@ -74,8 +74,8 @@ body {
     width:99.8%;
     margin-top:3px;
     margin-left: 1p;
-    color: rgb(244, 244, 244);
-    background-color: #2196f3;
+    color: #000000;
+    background-color: #FFFFFF;
 }
 
 .navBarContainer .hamburger .hamburgerList .hamburgerItem a {
@@ -84,7 +84,7 @@ body {
 
 
 .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
-    background-color: #1a7dcd;
+    background-color: #CCCCCC;
 }
 
 .button {
