@@ -252,3 +252,10 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
         top: -100%;
     }
 }
+
+@media (max-height: 100vh;) {
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
