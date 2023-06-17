@@ -138,6 +138,35 @@ body {
     max-width: 100%;
 }
 
+.textInput {
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-style: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.textInput:focus {
+    outline: none;
+    border-style: solid;
+    border-color: #079bf7;
+    transform: scale(1.1);
+}
+
+.fileInput {
+    display:none;
+}
+
+.fakeFileInput {
+    font-size: 20px;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -245,6 +274,9 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
     }
     .navBarContainer .hamburger.active {
         transform: none;
+    }
+    .textInput {
+        width: 96%;
     }
 }
 

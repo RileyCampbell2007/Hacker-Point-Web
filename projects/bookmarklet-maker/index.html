@@ -41,11 +41,19 @@
             <div class="content">
                 <h1>Bookmarklet Maker</h1>
                 <hr>
-                <label class="x-center" style="white-space: break-spaces;">Select a js file and hit upload!</label><br><br>
-                <input class="x-center" id="name" type="text" placeholder="Bookmarklet Name" value="Bookmarklet"><br><br>
-                <div class="x-center" style="width:70%">
-                    <input class="x-center" type="file" accept=".js" id="fileInput"><br>
-                </div><br>
+                <label style="white-space: break-spaces;">Select a js file and hit upload!</label><br><br>
+                <input class="textInput" id="name" type="text" placeholder="Bookmarklet Name" value="Bookmarklet"><br><br>
+                <button onclick="document.getElementById('fileInput').click()" class="button fakeFileInput" id="fakeFileInput">Choose A File</button>
+                <input class="fileInput" type="file" accept=".js" id="fileInput"><br>
+                <script>
+                    setInterval(()=>{
+                        if(document.getElementById('fileInput').value.split('\\')[2]!=undefined) {
+                            document.getElementById('fakeFileInput').innerHTML=document.getElementById('fileInput').value.split('\\')[2]
+                        } else {
+                            document.getElementById('fakeFileInput').innerHTML='Choose A File'
+                        }
+                    },100)
+                </script><br>
                 <button onclick="handleUpload()" class="button">Upload</button>
             </div>
             <div class="content" id="results"></div>
