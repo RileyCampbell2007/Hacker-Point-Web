@@ -247,13 +247,13 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
     }
 }
 
-@media (min-width: 701px;) {
+@media (min-width: 701px) {
     .navBarContainer .hamburger.active {
         top: -100%;
     }
 }
 
-@media (max-height: 100vh;) {
+@media (max-height: 100vh) {
     .footer {
         position: absolute;
         bottom: 0;
