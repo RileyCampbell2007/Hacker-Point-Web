@@ -1,8 +1,10 @@
 document.getElementsByClassName('hamburgerButton')[0].addEventListener('click', ()=>{
     if(document.getElementsByClassName('hamburger')[0].classList.contains('active')) {
         document.getElementsByClassName('hamburger')[0].classList.remove('active')
+        document.getElementsByClassName('hamburgerButton')[0].innerHTML='<i class="bi bi-list"></i>'
     } else {
         document.getElementsByClassName('hamburger')[0].classList.add('active')
+        document.getElementsByClassName('hamburgerButton')[0].innerHTML='<i class="bi bi-x-lg"></i>'
     }
 })
 

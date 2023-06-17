@@ -52,7 +52,8 @@ body {
 .navBarContainer .hamburger {
     position: absolute;
     left:0;
-    top:-100%;
+    top:0;
+    transform: translateY(-100%);
     width:120%;
     background-color: rgb(43, 43, 43);
     transition: 0.4s;
@@ -243,12 +244,12 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
         display: block;
     }
     .navBarContainer .hamburger.active {
-        top: 0;
+        transform: none;
     }
 }
 
 @media (min-width: 701px) {
     .navBarContainer .hamburger.active {
-        top: -100%;
+        transform: translateY(-100%);
     }
 }
