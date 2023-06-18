@@ -259,6 +259,36 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
     background-color: #CCCCCC;
 }
 
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(74, 74, 74);
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6b6b6b;
+}
+
+/* media queries */
+
 @media (max-width: 700px) {
     .contentBox {
         grid-template-columns: 1fr;
