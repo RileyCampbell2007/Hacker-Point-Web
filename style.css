@@ -263,7 +263,7 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 
 /* Track */
