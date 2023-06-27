@@ -159,6 +159,27 @@ body {
     transform: scale(1.1);
 }
 
+.checkboxInput {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-style: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.checkboxInput:hover {
+    outline-style: auto;
+    outline-color: #079bf7;
+    transform: scale(1.1);
+}
+
 .fileInput {
     display:none;
 }
