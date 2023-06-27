@@ -42,7 +42,7 @@
                 <input class="textInput" id="videoURL" type="text" placeholder="Video URL"><br><br>
                 <input class="checkboxInput" id="extractAudio" type="checkbox"><label> Extract Audio</label><br><br>
                 <input class="checkboxInput" id="downloadFile" checked type="checkbox"><label> Download File</label><br><br>
-                <button onclick="doDownload()" class="button">Download</button>
+                <a id="downloadLink"><button class="button">Download</button></a>
             </div>
             <div class="content">
                 <h1>YT-DLP API</h1>
@@ -61,8 +61,9 @@
                 if(document.getElementById('downloadFile').checked) {
                     var downloadFile = 'true'
                 }
-                window.open("https://api.hacker-point.com/ytdlp?url="+encodeURIComponent(videoURL)+'&extractAudio='+extractAudio+'&download='+downloadFile, "_blank");
+                document.getElementById('downloadLink').href = "https://api.hacker-point.com/ytdlp?url="+encodeURIComponent(videoURL)+'&extractAudio='+extractAudio+'&download='+downloadFile
             }
+            setInterval(doDownload,100)
         </script>
         <div class="contentBox footer">
             <div class="content">
