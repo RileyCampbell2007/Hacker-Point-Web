@@ -56,7 +56,8 @@
                 </script><br>
                 <button onclick="handleUpload()" class="button">Upload</button>
             </div>
-            <div class="content" id="results"></div>
+            <div class="content" id="results">
+            </div>
         </div>
         <script>
             function urlEncodeString(str) {
@@ -74,7 +75,22 @@
 
                     reader.onload = function(event) {
                         const fileData = event.target.result;
-                        document.getElementById('results').innerHTML='<br><a href="javascript:(function(){'+urlEncodeString(fileData)+'})();" onclick="return false;"><button class="button">'+document.getElementById('name').value+'</button></a>'
+                        document.getElementById('results').innerHTML=`
+<h1>Results</h1>
+<hr>
+<br><a href="javascript:(function(){`+urlEncodeString(fileData)+`})();" onclick="return false;"><button class="button">`+document.getElementById('name').value+`</button></a>
+<h1>Embed Into Your Site</h1>
+<hr>
+<div style="height:20px;width=0px;"></div>
+<div class="codeBlock" codeType="html">
+    <div class="codeBar">
+        <button class="codeCopyButton" onclick='navigator.clipboard.writeText("<a onclick=\\"return false;\\" href=\\"javascript:(function(){`+urlEncodeString(fileData)+`})();\\"><span style=\\"display: none;\\">`+document.getElementById('name').value+` | </span>Drag Me to Your Bookmarks Bar</a>");this.innerHTML="<i class=\\"bi bi-clipboard-check\\"></i> Copied!";setTimeout(()=>{this.innerHTML="<i class=\\"bi bi-clipboard\\"></i> Copy"}, 2000)'><i class="bi bi-clipboard"></i> Copy</button>
+    </div>
+    <div class="code">
+        <code><span class="tag">&lt;a <span class="attribute">onclick="<span class="attributeValue">return false;</span>"</span> <span class="attribute">href="<span class="attributeValue">javascript:(function(){`+urlEncodeString(fileData)+`})();</span>"</span>&gt;</span><span class="tag">&lt;span <span class="attribute">style="<span class="attributeValue">display: none;</span>"</span>&gt;</span>`+document.getElementById('name').value+` | <span class="tag">&lt;/span&gt;</span>Drag Me to Your Bookmarks Bar<span class="tag">&lt;/a&gt;</span></code>
+    </div>
+</div>
+`
                         document.getElementById('name').value='Bookmarklet'
                     };
 
