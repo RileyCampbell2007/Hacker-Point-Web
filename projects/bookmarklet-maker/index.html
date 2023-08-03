@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link rel="stylesheet" href="/style.css">
     </head>
@@ -84,7 +85,7 @@
 <div style="height:20px;width=0px;"></div>
 <div class="codeBlock" codeType="html">
     <div class="codeBar">
-        <button class="codeCopyButton" onclick='navigator.clipboard.writeText("<a onclick=\\"return false;\\" href=\\"javascript:(function(){`+urlEncodeString(fileData)+`})();\\"><span style=\\"display: none;\\">`+document.getElementById('name').value+` | </span>Drag Me to Your Bookmarks Bar</a>");this.innerHTML="<i class=\\"bi bi-clipboard-check\\"></i> Copied!";setTimeout(()=>{this.innerHTML="<i class=\\"bi bi-clipboard\\"></i> Copy"}, 2000)'><i class="bi bi-clipboard"></i> Copy</button>
+        <button class="codeCopyButton" onclick='navigator.clipboard.writeText(this.parentElement.parentElement.getElementsByTagName("code")[0].innerText);this.innerHTML="<i class=\\"bi bi-clipboard-check\\"></i> Copied!";setTimeout(()=>{this.innerHTML="<i class=\\"bi bi-clipboard\\"></i> Copy"}, 2000)'><i class="bi bi-clipboard"></i> Copy</button>
     </div>
     <div class="code">
         <code><span class="tag">&lt;a <span class="attribute">onclick="<span class="attributeValue">return false;</span>"</span> <span class="attribute">href="<span class="attributeValue">javascript:(function(){`+urlEncodeString(fileData)+`})();</span>"</span>&gt;</span><span class="tag">&lt;span <span class="attribute">style="<span class="attributeValue">display: none;</span>"</span>&gt;</span>`+document.getElementById('name').value+` | <span class="tag">&lt;/span&gt;</span>Drag Me to Your Bookmarks Bar<span class="tag">&lt;/a&gt;</span></code>

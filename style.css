@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Inter', sans-serif;
@@ -145,7 +147,7 @@ body {
     border-style: none;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
-    border-radius: 8px;
+    border-radius: 8px; 
     transition-duration: 0.2s;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -211,6 +213,7 @@ body {
 }
 
 .codeBlock .code {
+    font-family: 'Ubuntu Mono', monospace;
     overflow-wrap: break-word;
     -webkit-border-bottom-right-radius: 8px; 
     -webkit-border-bottom-left-radius: 8px; 
@@ -221,6 +224,10 @@ body {
     padding:5px;
     padding-left:30px;
     background-color: #121212;
+}
+
+.codeBlock .code code {
+    font-family: inherit;
 }
 
 .codeBlock[codeType="html"] .code .tag {
