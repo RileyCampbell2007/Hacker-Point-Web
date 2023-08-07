@@ -37,3 +37,25 @@ const checkDarkMode = function () {
 checkDarkMode()
 
 document.getElementById('darkModeSelector').addEventListener('click', checkDarkMode)
+
+function urlEncodeString(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+}
+
+var bookmarkletElements = Array.from(document.querySelectorAll('bookmarklet'))
+
+bookmarkletElements.forEach(async (element) => {
+    file = await (await fetch(element.getAttribute('file'))).text()
+    var bookmarkletURI = `javascript:${urlEncodeString(`(function(){${file}})()`)}`
+    var oldHTML = element.innerHTML
+    var newLink = document.createElement('a')
+    newLink.href = bookmarkletURI
+    newLink.onclick = 'return false;'
+    newLink.innerHTML = oldHTML
+    element.innerHTML = ''
+    element.appendChild(newLink)
+});
+
+

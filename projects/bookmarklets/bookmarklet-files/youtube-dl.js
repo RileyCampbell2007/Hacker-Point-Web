@@ -1,0 +1,1 @@
+window.open('https://api.hacker-point.com/ytdlp/?url=' + location.href, '_blank')
