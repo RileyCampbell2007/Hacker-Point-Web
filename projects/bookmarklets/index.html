@@ -42,6 +42,9 @@
                 <hr>
                 <p>Adds ChatGPT to the bottom of Instructure Canvas.</p>
                 <bookmarklet file="bookmarklet-files/canvas-chatgpt.js"><button class="button"><span style="display:none;">Canvas ChatGPT | </span>Drag Me To Your Bookmarks Bar</button></bookmarklet>
+                <!--<div style="height:20px;width:0px;"></div>
+                <div style="height:20px;width:0px;"></div>
+                <button onclick="(async (elem) => {var newElement = document.createElement('div'); newElement.classList.add('codeBlock'); newElement.innerHTML='<div class=\'codeBar\'><button class=\'codeCopyButton\' onclick=\'navigator.clipboard.writeText(this.parentElement.parentElement.getElementsByTagName(`code`)[0].innerText);this.innerHTML=\'<i class=\\\'bi bi-clipboard-check\\\'></i> Copied!\';setTimeout(()=>{this.innerHTML=\'<i class=\\\'bi bi-clipboard\\\'></i> Copy\'}, 2000)\'><i class=\'bi bi-clipboard\'></i> Copy</button></div><div class=\'code\'><code class=\'language-javascript\'>'+(await (await fetch(elem.parentElement.getElementsByTagName('bookmarklet')[0].getAttribute('file'))).text()).replace('<', '&lt;').replace('>', '&gt;')+'</code></div>'; elem.parentElement.appendChild(newElement); elem.parentElement.removeChild(elem);})(this)" class="button">View Source</button>-->
             </div>
         </div>
         <div class="contentBox">
