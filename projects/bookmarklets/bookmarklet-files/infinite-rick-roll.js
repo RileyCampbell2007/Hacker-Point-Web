@@ -5,6 +5,6 @@ for (leti = 0; i < links.length; i++) {
 };
 document.addEventListener('click', function() {
     setTimeout(function() {
-        window.open('//www.youtube.com/watch?v=xvFZjo5PgG0&autoplay=1');
+        window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0&autoplay=1');
     }, 0)
 })

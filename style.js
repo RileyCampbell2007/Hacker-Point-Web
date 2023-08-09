@@ -58,6 +58,19 @@ bookmarkletElements.forEach(async (element) => {
     element.appendChild(newLink)
 });
 
+function replaceHTMLTagsInChunks(inputString, chunkSize) {
+    let modifiedString = '';
+    let startIndex = 0;
+    let endIndex = Math.min(chunkSize, inputString.length);
+  
+    while (startIndex < inputString.length) {
+      modifiedString += inputString.slice(startIndex, endIndex).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      startIndex = endIndex;
+      endIndex = Math.min(endIndex + chunkSize, inputString.length);
+    }
+  
+    return modifiedString;
+  }
 
 setInterval(() => {
     Prism.highlightAll();
