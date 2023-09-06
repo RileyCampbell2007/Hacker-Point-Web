@@ -9,6 +9,12 @@ body {
     padding:0px;
     max-width: 100%;
     overflow-x: clip;
+    height: 100vh;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
 }
 
 .navBarContainer {
