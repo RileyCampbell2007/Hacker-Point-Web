@@ -3,18 +3,15 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
 body {
+    color:#0f0f0f;
     background-color: rgb(255, 255, 255);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     padding:0px;
     max-width: 100%;
     overflow-x: clip;
-    height: 100vh;
-}
-
-.footer {
-    position: relative;
-    bottom: 0;
+    background-image: url('/assets/branding/background-light.png');
+    background-attachment: fixed;
 }
 
 .navBarContainer {
@@ -22,11 +19,30 @@ body {
 }
 
 .navBar {
+    position: relative;
+    width: 95%;
+    margin: 0;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgba(49, 2, 2, 0.466);
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(56, 56, 56);
+    padding: 10px;
+    gap: 20px;
+    margin-top: 30px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin:0%;
-    height:0%;
-    width:100%;
+    z-index: 9999;
 }
 
 .navBar .logoSection{
@@ -34,8 +50,11 @@ body {
     height:40px
 }
 
-.navBar .logoSection img{
-    padding:10px;
+.navBar .logoSection a{
+    height:100%
+}
+
+.navBar .logoSection a img{
     height:100%
 }
 
@@ -56,26 +75,26 @@ body {
 .navBar .linkSection .linkContainer .hamburgerButton {
     position: relative;
     display: none;
-    z-index: 9999999;
 }
 
-.navBarContainer .hamburger {
+.hamburger {
     position: absolute;
     left:0;
     top:0;
     transform: translateY(-100%);
-    width:120%;
+    width:100vw;
     background-color: rgb(43, 43, 43);
     transition: 0.4s;
+    z-index: 1;
 }
 
-.navBarContainer .hamburger .hamburgerList{
+.hamburger .hamburgerList{
     width:100%;
     list-style-type: none;
     padding-left: 0;
 }
 
-.navBarContainer .hamburger .hamburgerList .hamburgerItem {
+.hamburger .hamburgerList .hamburgerItem {
     display:block;
     text-decoration: none;
     width:99.8%;
@@ -84,12 +103,13 @@ body {
     background-color: rgb(43, 43, 43);
 }
 
-.navBarContainer .hamburger .hamburgerList .hamburgerItem a {
+.hamburger .hamburgerList .hamburgerItem a {
     margin: 2px;
+    margin-left: 20px
 }
 
 
-.navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
+.hamburger .hamburgerList .hamburgerItem:hover {
     background-color: rgb(60, 60, 60);
 }
 
@@ -126,20 +146,37 @@ body {
 }
 
 .contentBox {
-    border-color: rgb(132, 132, 132);
+    position: relative;
+    width: 75%;
+    margin: 0;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgba(49, 2, 2, 0.466);
     border-style: solid;
-    border-width: 1px;
-    border-left: white;
-    border-right: white;
-    border-top: white;
+    border-width: 3px;
+    border-color: rgb(56, 56, 56);
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(312.5px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 30px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contentBox:hover {
+    background-color: rgba(35, 36, 54, 0.466);
 }
 
 .contentBox .content {
+    min-width: 0px;
     width: 100%;
     max-width: 100%;
 }
@@ -316,6 +353,7 @@ input:checked + .slider:before {
 body.dark {
     background-color: rgb(43, 43, 43);
     color:rgb(244, 244, 244);
+    background-image: url('/assets/branding/background-dark.png');
 }
 
 body.dark a:link {
@@ -330,16 +368,16 @@ body.dark .button:not(:disabled):hover {
     background-color: #0489db;
 }
 
-body.dark .navBarContainer .hamburger {
+body.dark .hamburger {
     background-color: #FFFFFF;
 }
 
-body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem {
+body.dark .hamburger .hamburgerList .hamburgerItem {
     color: #000000;
     background-color: #FFFFFF;
 }
 
-body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
+body.dark .hamburger .hamburgerList .hamburgerItem:hover {
     background-color: #CCCCCC;
 }
 
@@ -386,7 +424,7 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
     .navBar .linkSection .linkContainer .hamburgerButton {
         display: block;
     }
-    .navBarContainer .hamburger.active {
+    .hamburger.active {
         transform: none;
     }
     .textInput {
@@ -395,7 +433,7 @@ body.dark .navBarContainer .hamburger .hamburgerList .hamburgerItem:hover {
 }
 
 @media (min-width: 701px) {
-    .navBarContainer .hamburger.active {
+    .hamburger.active {
         transform: translateY(-100%);
     }
 }
