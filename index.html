@@ -1,90 +1,110 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-        <link rel="icon" type="image/svg" href="/assets/branding/favicon.svg">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-        <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="/prism-a11y-dark.css" />
-        <script src="/prism.js"></script>
-    </head>
-    <body>
-        <div class="navBarContainer">
-            <div class="navBar">
-                <div class="logoSection">
-                    <a href="/">
-                        <img src="/assets/branding/HPText.svg">
-                    </a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Point | Where Hacking Is The Point</title>
+    <link rel="icon" type="image/svg" href="/assets/branding/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="container">
+        <nav class="navbar">
+            <a href="/">
+                <img src="/assets/branding/HPText.svg" alt="Hacker Point" class="logo">
+            </a>
+            
+            <div class="nav-links desktop">
+                <a href="/" class="btn btn-outline">Home</a>
+                <a href="/projects.html" class="btn btn-outline">Projects</a>
+                <a href="https://github.com/RileyCampbell2007/Hacker-Point-Web" class="btn btn-primary">
+                    <i class="ti ti-brand-github"></i> GitHub
+                </a>
+            </div>
+            
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <i class="ti ti-menu-2"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <button class="hamburger-btn" id="closeMenuBtn">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="/" class="mobile-nav-link">Home</a>
+            <a href="/projects.html" class="mobile-nav-link">Projects</a>
+            <a href="https://github.com/RileyCampbell2007/Hacker-Point-Web" class="mobile-nav-link">GitHub</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <img src="/assets/branding/HPLogo.svg" alt="Hacker Point Logo" class="hero-logo">
+        <h1>Where Hacking Is The Point</h1>
+        <p>I'm Riley Campbell, a developer with some cool projects to show you.</p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="features container">
+        <div class="card-grid">
+            <div class="card">
+                <img src="/assets/screenshots/projects.png" alt="Projects" class="card-img">
+                <div class="card-content">
+                    <h2>Projects</h2>
+                    <p>Explore my collection of innovative projects and coding experiments.</p>
+                    <a href="/projects.html" class="btn btn-primary">View Projects</a>
                 </div>
-                <div class="linkSection">
-                    <div class="linkContainer">
-                        <a href="/"><button class="button linkItem">Home</button></a>
-                        <a href="/projects"><button class="button linkItem">Projects</button></a>
-                        <a href="https://github.com/RileyCampbell2007/Hacker-Point-Web"><button class="button linkItem">GitHub</button></a>
-                        <button class="button hamburgerButton"><i class="bi bi-list"></i></button>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="hamburger">
-            <ul class="hamburgerList">
-                <div style="height: 150px;"></div>
-                <li class="hamburgerItem"><a class="hamburgerItem" href="/">Home</a></li>
-                <li class="hamburgerItem"><a class="hamburgerItem" href="/projects/">Projects</a></li>
-                <li class="hamburgerItem"><a class="hamburgerItem" href="https://github.com/RileyCampbell2007/Hacker-Point-Web">GitHub</a></li>
-            </ul>
-        </div>
-        <div class="contentBox">
-            <div class="content"><img src="/assets/branding/HPLogo.svg"></div>
-            <div class="content">
-                <h1>Where Hacking Is The Point</h1>
-                <hr>
-                <p>I'm Riley Campbell, a developer with some cool projects to show you.</p>
-            </div>
-        </div>
-        <div class="contentBox">
-            <div class="content"><img src="/assets/screenshots/projects.png"></div>
-            <div class="content">
-                <h1>Projects</h1>
-                <hr>
-                <p>This is where you can view the projects I have on display.</p>
-                <a href="/projects/"><button class="button">Projects</button></a>
-            </div>
-        </div>
-        <div class="contentBox">
-            <div class="content"><img src="/assets/screenshots/guides.png"></div>
-            <div class="content">
-                <h1>Guides</h1>
-                <hr>
-                <p>This is where you can go to learn some interesting things.</p>
-                <a href="https://docs.hacker-point.com/guides"><button class="button">Guides</button></a>
-            </div>
-        </div>
-        <div class="contentBox">
-            <div class="content"><img src="/assets/screenshots/THH.png"></div>
-            <div class="content">
-                <h1>Top Hat Hacking</h1>
-                <hr>
-                <p>Check out our partner website Top Hat Hacking.</p>
-                <a href="https://tophathacking.dev"><button class="button">Top Hat Hacking</button></a>
-            </div>
-        </div>
-        <div class="contentBox footer">
-            <div class="content">
-                <div style="text-align: center;">
-                    <span style="line-height: 200%;">
-                        Dark Mode:
-                        <label class="switch">
-                            <input id="darkModeSelector" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </span>
-                </div>
-                <div>
-                    <p style="width:100%;text-align: center;">Copyright &copy; 2023 Riley Campbell</p>
+            
+            <div class="card">
+                <img src="/assets/screenshots/THH.png" alt="Top Hat Hacking" class="card-img">
+                <div class="card-content">
+                    <h2>Top Hat Hacking</h2>
+                    <p>Check out our partner website for more hacking resources and content.</p>
+                    <a href="https://tophathacking.dev" class="btn btn-primary">Visit THH</a>
                 </div>
             </div>
         </div>
-        <script src="/style.js"></script>
-    </body>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-content">
+            <p class="copyright">Copyright &copy; 2025 Riley Campbell</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
 </html>

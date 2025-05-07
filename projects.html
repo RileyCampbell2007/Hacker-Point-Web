@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Point | Where Hacking Is The Point</title>
+    <link rel="icon" type="image/svg" href="/assets/branding/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="container">
+        <nav class="navbar">
+            <a href="/">
+                <img src="/assets/branding/HPText.svg" alt="Hacker Point" class="logo">
+            </a>
+            
+            <div class="nav-links desktop">
+                <a href="/" class="btn btn-outline">Home</a>
+                <a href="/projects.html" class="btn btn-outline">Projects</a>
+                <a href="https://github.com/RileyCampbell2007/Hacker-Point-Web" class="btn btn-primary">
+                    <i class="ti ti-brand-github"></i> GitHub
+                </a>
+            </div>
+            
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <i class="ti ti-menu-2"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <button class="hamburger-btn" id="closeMenuBtn">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="/" class="mobile-nav-link">Home</a>
+            <a href="/projects.html" class="mobile-nav-link">Projects</a>
+            <a href="https://github.com/RileyCampbell2007/Hacker-Point-Web" class="mobile-nav-link">GitHub</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <h1>Projects</h1>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="features container">
+        <div class="card-grid">
+            <div class="card">
+                <object data="/assets/screenshots/passkill.svg" type="image/svg+xml" class="card-img"></object>
+                <div class="card-content">
+                    <h2>PassKill</h2>
+                    <p>A fast, open-source Windows recovery tool for resetting passwords and unlocking accounts.</p>
+                    <a href="https://github.com/RileyCampbell2007/PassKill" class="btn btn-primary"><i class="ti ti-brand-github"></i> PassKill on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="/assets/screenshots/THH.png" alt="Top Hat Hacking" class="card-img">
+                <div class="card-content">
+                    <h2>Top Hat Hacking</h2>
+                    <p>Check out our partner website for more hacking resources and content.</p>
+                    <a href="https://tophathacking.dev" class="btn btn-primary">Visit THH</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-content">
+            <p class="copyright">Copyright &copy; 2025 Riley Campbell</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
