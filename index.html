@@ -79,6 +79,35 @@
         <div class="footer-content">
             <p class="copyright">Copyright &copy; 2025 Riley Campbell</p>
         </div>
+        <div id="stanley">
+            <audio style="display: none;" src="/assets/stanley.wav"></audio>
+            <input type="radio" class="active"></div>
+
+        <script>
+            addButton = (e) => {
+                if (! e.target.classList.contains('active')) {
+                    return
+                }
+                e.target.classList.remove('active')
+                if (! window.musicRunning) {
+                    window.musicRunning = true;
+                    setInterval(() => {
+                        document.querySelector('#stanley audio').play()
+                    }, 0)
+                }
+                    
+                newElem = document.createElement('input')
+                newElem.type = 'radio'
+                newElem.classList.add('active')
+                newElem.addEventListener('click', addButton)
+                e.target.parentNode.appendChild(newElem)
+
+            }
+
+            window.musicRunning = false;
+            document.querySelector('#stanley input').checked = false;
+            document.querySelector('#stanley input').addEventListener('click', addButton);
+        </script>
     </footer>
 
     <script>
