@@ -60,13 +60,87 @@
                     <a href="https://github.com/RileyCampbell2007/PassKill" class="btn btn-primary"><i class="ti ti-brand-github"></i> PassKill on GitHub</a>
                 </div>
             </div>
+
+            <button id="weird-button" class="btn btn-primary" style="position: fixed; left: 2000px; top: 2000px; z-index: 1000;">Totally normal button :3</button>
             
-            <div class="card">
-                <img src="/assets/screenshots/THH.png" alt="Top Hat Hacking" class="card-img">
+            <div class="card" id="weird-button-card">
                 <div class="card-content">
-                    <h2>Top Hat Hacking</h2>
-                    <p>Check out our partner website for more hacking resources and content.</p>
-                    <a href="https://tophathacking.dev" class="btn btn-primary">Visit THH</a>
+                    <h2 class="card-title">I Think There's Something Wrong With This Button</h2>
+                    <p class="card-description">Mind... Uh... Poking it a little for me?</p>
+                    <button id="normal-button" class="btn btn-primary" style="opacity: 0%; cursor: unset;">Normal button</button>
+                    <script>
+                        const normalButton = document.getElementById('normal-button');
+                        const weirdButton = document.getElementById('weird-button');
+                        const card = document.getElementById('weird-button-card');
+
+                        setWeirdPositionToNormal = () => {
+                            const normalRect = normalButton.getBoundingClientRect();
+
+                            weirdButton.style.left = `${normalRect.left}px`;
+                            weirdButton.style.top = `${normalRect.top}px`;
+                        }
+
+                        setWeirdPositionToNormal();
+
+                        var positionerInterval = setInterval(setWeirdPositionToNormal, 0)
+
+                        window.weirdActive = false;
+                        window.weirdDone = false;
+
+
+                        weirdButton.addEventListener('mouseover', (event) => {
+                            if (! window.weirdDone) {
+                                if (! window.weirdActive) {
+                                    window.weirdActive = true;
+
+                                    clearInterval(positionerInterval)
+
+                                    card.querySelector('.card-title').innerHTML="OH S#@T! S*#T! F@*K!"
+                                    card.querySelector('.card-description').innerHTML="KILL IT! KILL IT WITH FIRE!"
+
+                                    weirdButton.innerHTML = "Can't catch me! &gt;:3"
+
+                                    weirdButton.addEventListener('click', (event) => {
+                                        if (! window.weirdDone) {
+                                            window.weirdDone = true;
+
+                                            card.querySelector('.card-title').innerHTML="Oh Thank God"
+                                            card.querySelector('.card-description').innerHTML="That thing was weird."
+
+                                            weirdButton.innerHTML=":&lt;"
+                                            weirdButton.setAttribute('disabled', 'disabled')
+
+                                            normalButton.style.opacity = "100%";
+                                            normalButton.style.cursor = "pointer";
+                                        }
+                                    })
+                                }
+
+                                var weirdRect = weirdButton.getBoundingClientRect()
+
+                                var maxTop = window.innerHeight - weirdRect.height
+                                var maxLeft = window.innerWidth - weirdRect.width
+
+                                var randomTop = Math.floor(Math.random() * maxTop)
+                                var randomLeft = Math.floor(Math.random() * maxLeft)
+
+                                if ((Math.abs(randomTop - event.clientY) < .50 * window.innerHeight) && (Math.abs(randomLeft - event.clientX) < .50 * window.innerWidth)) {
+                                    if (randomTop + (.5 * window.innerHeight) > maxTop) {
+                                        randomTop -= .5 * window.innerHeight
+                                    } else {
+                                        randomTop += .5 * window.innerHeight
+                                    }
+                                    if (randomTop < 0) {
+                                        randomTop = 0
+                                    }
+                                }
+                                
+                                weirdButton.style.top = `${randomTop}px`
+                                weirdButton.style.left = `${randomLeft}px`
+                            }
+                        })
+
+                    </script>
                 </div>
             </div>
         </div>
